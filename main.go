@@ -13,12 +13,10 @@ const (
 )
 
 func main() {
-	hook, err := github.New(github.Options.Secret("zxcv1234"))
-	fmt.Println(hook, err)
+	hook, _ := github.New(github.Options.Secret("redbrickstudio"))
 
 	http.HandleFunc(path, func(w http.ResponseWriter, r *http.Request) {
 		payload, err := hook.Parse(r, github.PushEvent)
-		fmt.Println(payload)
 
 		if err != nil {
 			if err == github.ErrEventNotFound {
@@ -28,15 +26,10 @@ func main() {
 		}
 		switch payload.(type) {
 
-		case github.ReleasePayload:
-			release := payload.(github.ReleasePayload)
+		case github.PushPayload:
+			pushPayload := payload.(github.PushPayload)
 			// Do whatever you want from here...
-			fmt.Printf("%+v", release)
-
-		case github.PullRequestPayload:
-			pullRequest := payload.(github.PullRequestPayload)
-			// Do whatever you want from here...
-			fmt.Printf("%+v", pullRequest)
+			fmt.Printf("%+v", pushPayload)
 		}
 	})
 	http.ListenAndServe(":3000", nil)
