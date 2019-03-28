@@ -16,7 +16,7 @@ func main() {
 	hook, _ := github.New(github.Options.Secret("redbrickstudio"))
 
 	http.HandleFunc(path, func(w http.ResponseWriter, r *http.Request) {
-		payload, err := hook.Parse(r, github.PushEvent)
+		payload, err := hook.Parse(r, github.PushEvent, github.CommitCommentEvent)
 
 		if err != nil {
 			if err == github.ErrEventNotFound {
@@ -24,7 +24,7 @@ func main() {
 				// ok event wasn;t one of the ones asked to be parsed
 			}
 		}
-		fmt.Println(payload.(github.PushPayload))
+		fmt.Println(payload)
 		switch payload.(type) {
 
 		case github.PushPayload:
