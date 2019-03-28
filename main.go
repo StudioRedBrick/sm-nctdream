@@ -27,7 +27,7 @@ func main() {
 
 		return nil
 	})
-	e.Logger.Fatal(e.Start(":1323"))
+	e.Logger.Fatal(e.Start(":3000"))
 
 	//http.HandleFunc(path, func(w http.ResponseWriter, r *http.Request) {
 	//	payload, err := hook.Parse(r, github.PushEvent, github.CommitCommentEvent)
