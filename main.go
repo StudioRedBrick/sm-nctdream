@@ -24,7 +24,7 @@ func main() {
 				// ok event wasn;t one of the ones asked to be parsed
 			}
 		}
-		fmt.Println(payload)
+		fmt.Println(payload.(github.PushPayload))
 		switch payload.(type) {
 
 		case github.PushPayload:
