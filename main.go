@@ -16,7 +16,7 @@ func main() {
 	e := echo.New()
 
 	e.POST(path,func(e echo.Context) error {
-		payload, err := hook.Parse(e.Request(), github.PushEvent, github.StatusEvent)
+		payload, err := hook.Parse(e.Request(), github.PushEvent)
 		if err != nil {
 			if err == github.ErrEventNotFound {
 				fmt.Println("error occur ", err)
@@ -24,6 +24,14 @@ func main() {
 			}
 		}
 		fmt.Println(payload)
+
+			switch payload.(type) {
+
+			case github.PushPayload:
+				pushPayload := payload.(github.PushPayload)
+				// Do whatever you want from here...
+				fmt.Printf("%+v", pushPayload)
+			}
 
 		return nil
 	})
