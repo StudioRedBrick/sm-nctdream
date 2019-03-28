@@ -18,14 +18,16 @@ func main() {
 
 	http.HandleFunc(path, func(w http.ResponseWriter, r *http.Request) {
 		payload, err := hook.Parse(r, github.ReleaseEvent, github.PullRequestEvent)
-		fmt.Println(payload.(github.StatusPayload))
+		fmt.Println(payload)
+
 		if err != nil {
 			if err == github.ErrEventNotFound {
+				fmt.Println("error occur ", err)
 				// ok event wasn;t one of the ones asked to be parsed
 			}
 		}
 		switch payload.(type) {
-			
+
 		case github.ReleasePayload:
 			release := payload.(github.ReleasePayload)
 			// Do whatever you want from here...
