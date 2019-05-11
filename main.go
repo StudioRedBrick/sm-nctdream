@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/labstack/echo/middleware"
 	"os/exec"
+	"net/http"
 )
 
 const (
@@ -17,11 +18,10 @@ func main() {
 
 	e := echo.New()
 
-
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
-	e.POST(path,func(e echo.Context) error {
+	e.POST(path, func(e echo.Context) error {
 		payload, err := hook.Parse(e.Request(), github.PushEvent)
 		if err != nil {
 			if err == github.ErrEventNotFound {
@@ -31,17 +31,22 @@ func main() {
 		}
 		fmt.Println(payload)
 
-			switch payload.(type) {
+		switch payload.(type) {
 
-			case github.PushPayload:
-				pushPayload := payload.(github.PushPayload)
-				// Do whatever you want from here...
-				fmt.Printf("%+v", pushPayload)
-				cmd :=  exec.Command("./git_pull.sh")
-				cmd.Run()
-			}
+		case github.PushPayload:
+			// pushPayload := payload.(github.PushPayload)
+			// Do whatever you want from here...
+			// fmt.Printf("%+v", pushPayload)
+			cmd := exec.Command("./git_pull.sh")
+			cmd.Run()
+		}
 
 		return nil
 	})
+
+	e.GET("/hello", func(e echo.Context) error {
+		return e.JSON(http.StatusOK,"world")
+	})
+
 	e.Logger.Fatal(e.Start(":3000"))
 }
