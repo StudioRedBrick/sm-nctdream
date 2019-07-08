@@ -20,4 +20,12 @@ function centerEle(){
     
     $(".content .inner").css({"padding-top":fin});
     console.log('fin='+fin);
+    
+    $(window).resize(function(){
+        var win = $(window).height()/2;
+        var val = $(".content .inner").height()/2;
+        var fin = win-val;
+
+        $(".content .inner").css({"padding-top":fin});
+    });
 }
