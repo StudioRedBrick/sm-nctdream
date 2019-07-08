@@ -23,12 +23,18 @@ p, span, h1, h2, h3{margin:0; padding:0;}
 .title{width: 220px; height:100px; background:url(../img/title.png); background-repeat:no-repeat; background-size:cover; margin:0 auto 20px auto;}
 
 /*graphic details*/
-.content .inner ul li{position:absolute; top:0; left:0; z-index:2; pointer-events:none;}
+.content .inner ul li{position:absolute; top:0; left:0; z-index:2; pointer-events:none; animation:enlarge 0.3s forwards ease-in-out; transform:scale(0);}
 
-.content .inner ul li:nth-child(1){background:url(../img/g1.png); background-repeat:no-repeat; width:161px; height:163px; transform:scale(0.5); top:200px;}
-.content .inner ul li:nth-child(2){background:url(../img/g3.png); background-repeat:no-repeat; width:557px; height:555px; transform:scale(0.5); top:180px; left:-110px;}
+.content .inner ul li:nth-child(1){background:url(../img/g1.png); background-repeat:no-repeat; background-size:cover; width:100px; height:100px; left:200px; top:170px;}
+.content .inner ul li:nth-child(2){background:url(../img/g3.png); background-repeat:no-repeat; background-size:cover; width:357px; height:355px; top:280px; left:10px;}
+
+/*graphic animation*/
+@keyframes enlarge{
+    0%{transform:scale(0);}
+    100%{transform:scale(1);}
+}
 
 /*loading page*/
 .loading{width:100vw; height:100vh; background:rgba(0,0,0,0.7); position:absolute; left:0; top:0; z-index:9999; display:none;}
 .loading .pos_rel{position:relative;}
-.loading .pos_rel p{width:120px; height:120px; background:red; position:absolute; left:calc(50% - 60px); top:270px;}
+.loading .pos_rel p{width:120px; height:120px; position:absolute; left:calc(50% - 60px); top:270px;}
