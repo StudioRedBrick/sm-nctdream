@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+/*loading page*/
+.loading{width:100vw; height:100vh; position:absolute; left:0; top:0; z-index:9999; display:none;}
+.loading .pos_rel{position:relative;}
+.loading .pos_rel img{height:100vh; position:absolute; top:0; left:0;}
+.loading .pos_rel .loading_bg{background:url(../img/loading-bg.png); background-repeat:no-repeat; background-size:cover; background-position:center; height:100vh;}
+/*----------------------------------------------------*/
