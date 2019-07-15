@@ -10,7 +10,7 @@ ul, li{list-style:none; margin:0;}
 p, span, h1, h2, h3{margin:0; padding:0;}
 /*reset end*/
 /*----------------------------------------------------*/
-html,body{
+html,body,.count_wrap{
   --safe-area-inset-top: env(safe-area-inset-top);
   --safe-area-inset-bottom: env(safe-area-inset-bottom);
   height: calc(100% + (var(--safe-area-inset-top) + var(--safe-area-inset-bottom)));
@@ -18,7 +18,7 @@ html,body{
 
 
 /*countdown*/
-.count_wrap{width:100vw; height:100vh; background:rgba(0,0,0,1); z-index:9999; overflow:hidden;}
+.count_wrap{width:100vw; background:rgba(0,0,0,1); z-index:9999; overflow:hidden;}
 .count_wrap .pos_rel{position:relative; width:100vw; height:100%; overflow: hidden;}
 
 
