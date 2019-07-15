@@ -23,7 +23,18 @@
         }
     </script>
     
+    <style>
+        .pc_wrap{width:100vw; height:100vh; background:url(./img/pc/bg.png); background-repeat:no-repeat; background-size:cover; background-position:center; position:relative;}
+        
+        .pc_wrap .pc_text{width:500px; position:absolute; left:calc(50% - 250px); top:calc(50% - 103px);}
+        
+        .pc_wrap .pc_stamp{width:160px; position:absolute; right:50px; bottom:50px;}
+    </style>
+    
     <body>
-        <p>모바일 버전을 이용해 주세요!</p>
+        <div class="pc_wrap">
+            <img class="pc_text" src="./img/pc/txt.png"> 
+            <!--<img class="pc_stamp" src="./img/pc/stamp.png">-->
+        </div>
     </body>
 </html>
