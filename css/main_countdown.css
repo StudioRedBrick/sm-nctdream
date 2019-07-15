@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700,700i,800,800i,900,900i&display=swap');
-
 @viewport {viewport-fit: cover;}
+
 /*reset*/
 *{margin:0; padding:0; font-family: 'Montserrat', sans-serif; hyphens:none; word-break:keep-all; color:rgba(50,50,50,1); outline:none;}
 html{overflow-x:hidden;}
@@ -20,9 +20,6 @@ html,body,.count_wrap{
 /*countdown*/
 .count_wrap{width:100vw; background:rgba(0,0,0,1); z-index:9999; overflow:hidden;}
 .count_wrap .pos_rel{position:relative; width:100vw; height:100%; overflow: hidden;}
-
-
-
 
 .count_wrap .pos_rel .count_artwork{text-align: center; position: absolute; top: calc(50% - 235px); height: 480px;}
 .count_wrap .pos_rel .count_artwork .title{width: 270px;}
