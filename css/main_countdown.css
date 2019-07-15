@@ -24,7 +24,7 @@ html,body,.count_wrap{
 
 
 
-.count_wrap .pos_rel .count_artwork{text-align: center; position: absolute; top: calc(50% - 230px); height: 480px;}
+.count_wrap .pos_rel .count_artwork{text-align: center; position: absolute; top: calc(50% - 235px); height: 480px;}
 .count_wrap .pos_rel .count_artwork .title{width: 270px;}
 .count_wrap .pos_rel .count_artwork .source{width: 200px; margin-top: 45px;}
 .count_wrap .pos_rel .count_artwork .date{width: 210px; margin-top: 30px;}
