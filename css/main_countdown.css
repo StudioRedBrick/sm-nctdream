@@ -11,10 +11,15 @@ ul, li{list-style:none; margin:0;}
 p, span, h1, h2, h3{margin:0; padding:0;}
 /*reset end*/
 /*----------------------------------------------------*/
+html,body,.count_wrap{
+  height: 100%;
+}
+
+
 
 /*countdown*/
-.count_wrap{width:100vw; height: 100vh; background:rgba(0,0,0,1); z-index:9999; overflow:hidden;}
-.count_wrap .pos_rel{position:relative; width:100vw; height:100vh; overflow: hidden;}
+.count_wrap{width:100vw; background:rgba(0,0,0,1); z-index:9999; overflow:hidden;}
+.count_wrap .pos_rel{position:relative; width:100vw; height:100%; overflow: hidden;}
 
 .count_wrap .pos_rel .count_artwork{text-align: center; position: absolute; top: calc(50% - 235px); height: 480px;}
 .count_wrap .pos_rel .count_artwork .title{width: 270px;}
