@@ -11,6 +11,7 @@ p, span, h1, h2, h3{margin:0; padding:0;}
 /*reset end*/
 /*----------------------------------------------------*/
 
+body, html{margin: 0; overflow:hidden; height:100%;}
 /*countdown*/
 .count_wrap{width:100vw; height:100vh; background:rgba(0,0,0,1); position:absolute; left:0; top:0; z-index:9999; overflow:hidden;}
 .count_wrap .pos_rel{position:relative; width:100vw; height:100vh;}
