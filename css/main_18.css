@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*----------------------------------------------------*/
+
+/*graphic details*/
+
+/*18-1*/
+.content .inner .graphic li:nth-child(1){background:url(../img/g3.png); background-repeat:no-repeat; background-size:contain; width:75px; height:91px; left:29px; top:376px; transform:rotate(-10deg); display:none; transform:scale(0.9);}
+/*18-2*/
+.content .inner .graphic li:nth-child(2){background:url(../img/g4.png); background-repeat:no-repeat; background-size:contain; width:75px; height:91px; left:251px; top:375px; transform:rotate(10deg); display:none; transform:scale(0.9);}
