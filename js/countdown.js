@@ -22,7 +22,7 @@ function countDown(){
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Display the result in the element with id="demo"
-      $(".countdown").html(days + "D "+hours + "H "
+      $(".countdown").html(hours + "H "
       + minutes + "M " + seconds + "S ");
 
       // If the count down is finished, write some text 

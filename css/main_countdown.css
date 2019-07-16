@@ -24,3 +24,6 @@ html,body,.count_wrap{height: 100%;}
 
 .count_wrap .pos_rel .count_artwork p{font-size: 25px; font-weight: 700; font-style: italic; color:#ffffff; margin-top: 20px;}
 
+@media only screen and (orientation:landscape){
+    .count_wrap .pos_rel .count_artwork{left: calc(50% - 345px); margin-top: 6vh;}
+}
