@@ -33,18 +33,18 @@
         var mobileKeyWords = new Array('iPhone','SAMSUNG','BlackBerry','Android','Windows CE','Windows CE;','LG','MOT','SonyEricsson','Symbian','Opera Mobi','Opera Mini','IEmobile');
         for(var word in mobileKeyWords){
             if(navigator.userAgent.match(mobileKeyWords[word])!=null){
-                return;
+                console.log("mb");
             }else{
                 console.log("pc");
             }
         }
         
         
-        var winWid = $(window).width();
-        console.log(winWid);
-        if(winWid > 768){
-            $('body').addClass('pc');
-        }
+//        var winWid = $(window).width();
+//        console.log(winWid);
+//        if(winWid > 768){
+//            $('body').addClass('pc');
+//        }
         
         
     
