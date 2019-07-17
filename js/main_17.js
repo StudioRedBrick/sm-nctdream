@@ -6,6 +6,7 @@ $(window).load(function(){
     
     scratchMe();
     refreshPage();
+    
 
 });
 
