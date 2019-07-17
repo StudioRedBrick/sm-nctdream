@@ -24,7 +24,9 @@ function getWidth(){
                         break; 
                     }
                 }
-            }else {                           
+            }
+        
+        if($(window).width() > 415){                           
                location.href="index.html";
             }
         });
@@ -42,9 +44,9 @@ function getWidth(){
                 }
             } 
         }
-        else {          
-           location.href="index.html";
-        } 
+         if($(window).width() > 415){                           
+               location.href="index.html";
+            }
 }
 
 
