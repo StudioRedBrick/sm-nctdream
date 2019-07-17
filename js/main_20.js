@@ -1,11 +1,12 @@
 $(window).load(function(){
 /*모든 파일이 로드 되었을때 실행됩니다.*/
-    
+    console.log('all loaded');
     //모든 파일이 로드 되었을때 spinner는 꺼집니다.
-    $(".loading").css({"display":"none"});
+    
     
     scratchMe();
     refreshPage();
+
 });
 
 var $date,
@@ -32,7 +33,6 @@ function scratchMe(){
 //            console.log(percent);
         // Show the plain-text promo code and call-to-action when the scratch area is 50% scratched
         if (percent > 88){
-            
             if($(".popup").hasClass("check")){
                 $(".popup").css({"display":"none"});   
             }else{
@@ -105,6 +105,7 @@ function displayImg($date,$Target,$Num){
       "background-image" : "url("+ bgURLs +")"
     });
 };
+
 function refreshPage(){
     $(".popup img").click(function(){
         location.reload();
@@ -116,3 +117,13 @@ function refreshPage(){
         $(".popup").delay(100).css({"display":"none"});
     });
 }
+
+
+
+
+
+
+
+
+
+
