@@ -26,8 +26,27 @@
         <script type="text/javascript" src="./js/vendor/wScratchPad.js"></script>
         <script type="text/javascript" src="./js/countdown.js?238"></script>
         <script type="text/javascript" src="./js/main_17.js?237"></script>
-        <script type="text/javascript" src="./js/main.js?9931"></script>
+        <script type="text/javascript" src="./js/main.js?19931"></script>
     </head>
+    
+    <script>
+        var mobileKeyWords = new Array('iPhone','SAMSUNG','BlackBerry','Android','Windows CE','Windows CE;','LG','MOT','SonyEricsson','Symbian','Opera Mobi','Opera Mini','IEmobile');
+        for(var word in mobileKeyWords){
+            if(navigator.userAgent.match(mobileKeyWords[word])==null){
+                location.href="index.html";
+                break;
+            }
+        }
+        
+        
+//        var winWid = $(window).width();
+//        if(winWid > 768){
+//            $('body').addClasss('pc');
+//        }
+        
+        
+    
+    </script>
     
     <body>
         <div class="count_wrap">
