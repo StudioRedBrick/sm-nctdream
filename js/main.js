@@ -18,7 +18,7 @@ function getWidth(){
                 var mobileKeyWords = new Array('iPhone','SAMSUNG','BlackBerry','Android','Windows CE','Windows CE;','LG','MOT','SonyEricsson','Symbian','Opera Mobi','Opera Mini','IEmobile');
                 for(var word in mobileKeyWords){
                     if(navigator.userAgent.match(mobileKeyWords[word])!=null){
-                        
+                        return;
                     }else{
                        location.href="index.html";
                         break; 
@@ -37,7 +37,7 @@ function getWidth(){
            var mobileKeyWords = new Array('iPhone','SAMSUNG','BlackBerry','Android','Windows CE','Windows CE;','LG','MOT','SonyEricsson','Symbian','Opera Mobi','Opera Mini','IEmobile');
             for(var word in mobileKeyWords){
                 if(navigator.userAgent.match(mobileKeyWords[word])!=null){
-                    
+                    return;
                 }else{
                    location.href="index.html";
                     break; 
