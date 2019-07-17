@@ -1,11 +1,11 @@
-$(window).load(function(){
+$(document).ready(function(){
     getWidth();
 });
 
 function getWidth(){
     $(window).resize(function(){
             
-            if ($(window).width() < 415) {
+            if ($(window).width() < 415){
                 
                 var mobileKeyWords = new Array('iPhone','SAMSUNG','BlackBerry','Android','Windows CE','Windows CE;','LG','MOT','SonyEricsson','Symbian','Opera Mobi','Opera Mini','IEmobile');
                 for(var word in mobileKeyWords){
@@ -14,10 +14,8 @@ function getWidth(){
                         break;
                     }
                 }
-            }
-            else {                           
+            }else {                           
                location.href="index.html";
-                break;
             }
         });
 
@@ -33,8 +31,7 @@ function getWidth(){
             } 
         }
         else {          
-           location.href="index.html"; 
-            break;
+           location.href="index.html";
         } 
 }
 
