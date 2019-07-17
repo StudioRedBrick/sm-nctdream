@@ -34,10 +34,12 @@
         for(var word in mobileKeyWords){
             if(navigator.userAgent.match(mobileKeyWords[word])!=null){
                 console.log("mb");
-            }else{
-                console.log("pc");
             }
         }
+        if(navigator.userAgent.match(mobileKeyWords[word])==null){
+                console.log("mb");
+        }
+        
         
         
 //        var winWid = $(window).width();
