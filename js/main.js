@@ -17,6 +17,7 @@ function getWidth(){
             }
             else {                           
                location.href="index.html";
+                break;
             }
         });
 
@@ -33,6 +34,7 @@ function getWidth(){
         }
         else {          
            location.href="index.html"; 
+            break;
         } 
 }
 
