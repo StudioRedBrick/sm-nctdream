@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    getWidth();
+//    getWidth();
     
     $(document).bind("contextmenu",function(e){
       return false;
