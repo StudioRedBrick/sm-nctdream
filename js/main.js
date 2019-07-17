@@ -38,10 +38,11 @@ function getWidth(){
             for(var word in mobileKeyWords){
                 if(navigator.userAgent.match(mobileKeyWords[word])!=null){
                     return;
-                }else{
-                   location.href="index.html";
-                    break; 
                 }
+//                else{
+//                   location.href="index.html";
+//                    break; 
+//                }
             } 
         }
          if($(window).width() > 1336){                           
