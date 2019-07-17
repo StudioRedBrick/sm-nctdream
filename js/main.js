@@ -12,7 +12,23 @@ $(document).ready(function(){
 
 function getWidth(){
     
-     var mobileKeyWords;
+    var mobileKeyWords;
+    
+    mobileKeyWords = new Array('iPhone','SAMSUNG','BlackBerry','Android','Windows CE','Windows CE;','LG','MOT','SonyEricsson','Symbian','Opera Mobi','Opera Mini','IEmobile');
+    for(var word in mobileKeyWords){
+        if(navigator.userAgent.match(mobileKeyWords[word])!=null){
+            return;
+        }
+        if(navigator.userAgent.match(mobileKeyWords[word])==null){
+           location.href="index.html";
+            break; 
+        }
+    } 
+    
+    
+    
+    
+    
     $(window).resize(function(){
             mobileKeyWords = new Array('iPhone','SAMSUNG','BlackBerry','Android','Windows CE','Windows CE;','LG','MOT','SonyEricsson','Symbian','Opera Mobi','Opera Mini','IEmobile');
             if ($(window).width() < 1336){
@@ -33,21 +49,27 @@ function getWidth(){
 
         //console.log('window'+$(window).width());
     
-        if ($(window).width() < 1336) {       // if width is less than 600px
-           mobileKeyWords = new Array('iPhone','SAMSUNG','BlackBerry','Android','Windows CE','Windows CE;','LG','MOT','SonyEricsson','Symbian','Opera Mobi','Opera Mini','IEmobile');
-            for(var word in mobileKeyWords){
-                if(navigator.userAgent.match(mobileKeyWords[word])!=null){
-                    return;
-                }
-                if(navigator.userAgent.match(mobileKeyWords[word])==null){
-                   location.href="index.html";
-                    break; 
-                }
-            } 
-        }
-         if($(window).width() > 1336){                           
-               location.href="index.html";
-            }
+    
+    
+    
+    
+    
+    
+//        if ($(window).width() < 1336) { 
+//           mobileKeyWords = new Array('iPhone','SAMSUNG','BlackBerry','Android','Windows CE','Windows CE;','LG','MOT','SonyEricsson','Symbian','Opera Mobi','Opera Mini','IEmobile');
+//            for(var word in mobileKeyWords){
+//                if(navigator.userAgent.match(mobileKeyWords[word])!=null){
+//                    return;
+//                }
+//                if(navigator.userAgent.match(mobileKeyWords[word])==null){
+//                   location.href="index.html";
+//                    break; 
+//                }
+//            } 
+//        }
+//         if($(window).width() > 1336){                           
+//               location.href="index.html";
+//            }
 }
 
 
