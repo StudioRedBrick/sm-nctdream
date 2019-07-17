@@ -5,6 +5,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X_UA-compatible" content="IE=Edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        
+        <!--open graph-->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="WEBOOM SMTOWN - NCT DREAM">
+        <meta property="og:description" content="WEBOOM SMTOWN - NCT DREAM">
+        <meta property="og:image" content="http://weboom.smtown.com/img/opengraph.png">
+        <meta property="og:url" content="http://weboom.smtown.com"> 
 
         <title>NCT DREAM</title>
 
@@ -17,7 +24,7 @@
         var mobileKeyWords = new Array('iPhone','SAMSUNG','BlackBerry','Android','Windows CE','Windows CE;','LG','MOT','SonyEricsson','Symbian','Opera Mobi','Opera Mini','IEmobile');
         for(var word in mobileKeyWords){
             if(navigator.userAgent.match(mobileKeyWords[word])!=null){
-                location.href="index_countdown.html";
+                location.href="weboom.html";
                 break;
             }
         }

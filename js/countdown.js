@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 function countDown(){
     // Set the date we're counting down to
+//    var countDownDate = new Date("July 17, 2019 12:00:00").getTime();
     var countDownDate = new Date("July 17, 2019 12:00:00").getTime();
 
     // Update the count down every 1 second
@@ -28,10 +29,13 @@ function countDown(){
       // If the count down is finished, write some text 
       if (distance < 0) {
         clearInterval(x);
-
+        $(".count_wrap").remove();
+        //turn off countdown
+        $(".count_wrap").css({"display":"none"});
+        $(".loading").css({"display":"none"});
       }else{
-
+        //turn on countdown
+        $(".count_wrap").css({"display":"block"});
       } 
-
     },500);
 }
