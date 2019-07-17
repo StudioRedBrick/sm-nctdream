@@ -14,7 +14,10 @@ function getWidth(){
     
     var winTT = $(window).width();
     console.log('window width='+winTT);
-
+    
+    if(winTT > 768){
+       location.href="index.html"
+    }
 }
 
 
